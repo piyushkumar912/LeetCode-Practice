@@ -1,0 +1,15 @@
+class Solution {
+    public int mirrorDistance(int n) {
+        int rev = 0;
+        int dummy = n;
+        while(n > 0){
+         int rem = n % 10;
+         rev = rev * 10 + rem; 
+         n = n / 10;  
+        }
+        return Math.abs(dummy - rev);
+    }
+}
+
+// Time: O(d), where d is the number of digits.
+// Space: O(1).
