@@ -17,5 +17,5 @@ class Solution {
     }
 }
 
-//Time: O(n²)
-//Space: O(1)
+//Time: O(n²)– Two nested loops.
+//Space: O(1)– No extra data structure is used.
