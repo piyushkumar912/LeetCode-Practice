@@ -1,15 +1,23 @@
 class Solution {
     public int mirrorDistance(int n) {
-        int rev = 0;
-        int dummy = n;
+        int original = n;
+        int reverse = 0;
         while(n > 0){
-         int rem = n % 10;
-         rev = rev * 10 + rem; 
-         n = n / 10;  
+            int digit = n % 10;               // Get the last digit
+            reverse = reverse * 10 + digit;  // Add the digit to the reversed number
+            n /= 10;                        // Remove the last digit from n
+
         }
-        return Math.abs(dummy - rev);
+        return Math.abs(original - reverse); // RETURN DIFFERENCE BETWEEN ORIGINAL AND REVERSE 
     }
 }
 
-// Time: O(d), where d is the number of digits.
-// Space: O(1).
+// Time Complexity  → O(log n)
+// Space Complexity → O(1)
+
+
+
+// Extract last digit using % 10
+// Remove last digit using / 10
+// Build reverse using reverse * 10 + digit
+// Find mirror distance using Math.abs(original - reverse)
