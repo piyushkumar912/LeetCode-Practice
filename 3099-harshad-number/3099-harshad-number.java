@@ -1,18 +1,17 @@
 class Solution {
     public int sumOfTheDigitsOfHarshadNumber(int x) {
-      int sum = 0;
-      int dummy = x;
-      while(x > 0){
-        int rem = x % 10;
-        sum = sum + rem;
-        x = x / 10;
-      }
-      // x = 0; sum = 5;
-      if(dummy % sum == 0){
-        return sum;
-      }
-      else{
+        int original = x;
+        int sum = 0;
+         // Sum of digits
+        while(x > 0){
+            int digit = x % 10;
+            sum += digit;
+            x /= 10;
+        }
+          // Check Harshad Number
+        if(original % sum == 0){
+            return sum;
+        }
         return -1;
-      }
     }
 }
