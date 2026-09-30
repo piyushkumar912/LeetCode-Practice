@@ -26,3 +26,5 @@ class Solution {
 
 //Time: O(n)
 //Space: O(1)
+
+//Concept :-> Isme jitne k diye hue hai utne consecutive black bnana hai agar black nhi h to white jitne time target ko pure krne ya black ko bnane me operation lagenge utne count kr ke return kr dena hai..
